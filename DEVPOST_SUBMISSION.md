@@ -92,7 +92,7 @@ Significant. WebMCP is experimental and the challenge work included learning the
 
 ## Submission links
 - Public GitHub repository: https://github.com/HenrikBrixCare/forsyningsdata-danmark-webmcp
-- Current challenge preview candidate: https://forsyningsdata-danmark-git-webmcp-challenge-2026-tilbudstjek.vercel.app
+- Rebuilt challenge preview candidate (fresh deployment on August 26, 2026): https://forsyningsdata-danmark-git-webmcp-challenge-2026-tilbudstjek.vercel.app
 - Demo video: TODO after recording
 
 ## Final checks still required
@@ -103,4 +103,6 @@ Significant. WebMCP is experimental and the challenge work included learning the
 - Keep non-Danish connectors clearly marked as planned, not live.
 - Submit the Devpost entry before the deadline; do not leave it in Draft.
 
-Current Devpost schedule shows the deadline as Sep 3, 2026 at 1:00pm PDT (22:00 CEST in Denmark).
+Current official Devpost schedule shows the deadline as **Sep 3, 2026 at 1:00pm PDT (22:00 CEST in Denmark)**.
+
+After the submission period closes, **do not edit the Devpost submission, the submitted repository, or the submitted live site during the judging period**. If further development is needed after submission closes, work in a separate fork/copy that is not the submitted version.
