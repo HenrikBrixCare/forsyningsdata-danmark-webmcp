@@ -7,7 +7,7 @@ export default async function AddressProfile({ params }: { params: Promise<{ id:
   const parcel = await getParcel(address.lon, address.lat);
   const cards = [
     ["Adressevurdering", "Verified Danish address", `Coordinates: ${address.lon ?? "—"}, ${address.lat ?? "—"}`],
-    ["Kloak & regnvand", "Planning and drainage context", "Use the WebMCP utility tool for the structured Plandata result and preserve the original-source limitation."],
+    ["Kloak & regnvand", "Planning and drainage context", "Use the WebMCP utility tool for the structured planning result and preserve the original-source limitation."],
     ["Vand", "Water-supply context", "The public challenge export hands exact local water details back to original municipal/utility sources."],
     ["Andre ledninger", "Other utilities", "Gas and other network context is orienting only; proximity is not proof of a property connection."],
     ["Ejendomsgrundlag", "Parcel basis", `${parcel?.parcelNumber || "No parcel result"} · BFE ${parcel?.bfeNumber || "—"} · ${parcel?.lotAreaM2 ?? "—"} m²`],
@@ -15,7 +15,7 @@ export default async function AddressProfile({ params }: { params: Promise<{ id:
     ["Lokale kilder", "Original local sources", "When exact pipe location, drawings or authority requirements matter, the workflow opens the named original source."],
     ["Dokumentgrundlag", "Historic documents", "Building files, drainage drawings and permits remain human-verification steps when they matter to the decision."],
     ["Fjernvarme & tele/fiber", "Additional utility context", "This scoped repository demonstrates the WebMCP contract while keeping unrelated private adapters out of the public export."],
-    ["Jord & klima", "Environmental screening", "Missing automated data is never converted into a false ‘no risk’ conclusion; original KAMP/HIP/soil sources are surfaced instead."]
+    ["Jord & klima", "Environmental screening", "Missing automated data is never converted into a false ‘no risk’ conclusion; original climate/groundwater/soil sources are surfaced instead."]
   ];
   return (
     <main className="shell">
@@ -25,6 +25,10 @@ export default async function AddressProfile({ params }: { params: Promise<{ id:
         {cards.map(([kicker, title, body]) => <article className="data-card" key={kicker}><div className="card-kicker">{kicker}</div><h2>{title}</h2><p className="muted">{body}</p></article>)}
       </section>
       <p className="muted" style={{ marginTop: 24 }}>This is the scoped public challenge profile. The live challenge preview integrates the same WebMCP interaction model with the pre-existing private product data layer.</p>
+      <p className="muted" style={{ marginTop: 12 }}>
+        Address and parcel data attribution: (CC BY 4.0) Klimadatastyrelsen via Dataforsyningen.
+        {" "}<a className="source-link" href="https://dataforsyningen.dk/terms" target="_blank" rel="noreferrer">Terms</a>
+      </p>
     </main>
   );
 }
