@@ -1,5 +1,7 @@
 # Forsyningsdata Danmark — WebMCP Challenge 2026
 
+[![Public challenge checks](https://github.com/HenrikBrixCare/forsyningsdata-danmark-webmcp/actions/workflows/check.yml/badge.svg)](https://github.com/HenrikBrixCare/forsyningsdata-danmark-webmcp/actions/workflows/check.yml)
+
 Forsyningsdata Danmark is an address-first Danish public-data application that demonstrates how a website can expose structured actions to AI agents through WebMCP while keeping a human-readable interface, source attribution and limitations in the loop.
 
 ## Live challenge preview
@@ -82,7 +84,7 @@ The agent can also change the interface language while the active data country r
 
 ## Diagnostics
 
-The scoped public demo includes `/webmcp-test`, which reports whether `document.modelContext` is available and shows the 10 expected challenge tools. The browser's Model Context Tool Inspector is the authoritative view of tools actually discovered in a session.
+The scoped public demo includes `/webmcp-test`, which reports whether `document.modelContext` is available and, where supported, calls `document.modelContext.getTools()` to show the tools the browser **actually discovered in the current page**. It also shows the expected 10-tool challenge contract for comparison. The Chrome Model Context Tool Inspector remains an independent inspection/execution view.
 
 The live challenge branch was manually verified in Chrome from address search through property/utility/environment calls, map-layer listing, source handoff, profile navigation/focus and language switching.
 
@@ -98,7 +100,8 @@ The live challenge branch was manually verified in Chrome from address search th
 - [`VIDEO_SHOTLIST.md`](VIDEO_SHOTLIST.md) — timed <3-minute recording plan
 - [`YOUTUBE_UPLOAD.md`](YOUTUBE_UPLOAD.md) — prepared upload title/description/checks
 - [`DEPLOYMENT.md`](DEPLOYMENT.md) — clean public-judge deployment instructions
-- [`DEVPOST_SUBMISSION.md`](DEVPOST_SUBMISSION.md) — prepared submission copy
+- [`DEVPOST_SUBMISSION.md`](DEVPOST_SUBMISSION.md) — prepared long-form submission copy
+- [`DEVPOST_FIELD_MAP.md`](DEVPOST_FIELD_MAP.md) — field-by-field completion reference
 - [`FINAL_CHECKLIST.md`](FINAL_CHECKLIST.md) — completed and remaining submission steps
 
 ## Stack
