@@ -30,11 +30,11 @@ This is the part I care most about. The agent can open the address profile and f
 
 **2:08–2:28**
 
-Language and data jurisdiction are also separate. I can switch the interface to Italian, while the active data country remains Denmark. That lets an international user work with Danish source data in another language without pretending that Italian source coverage is already live.
+Language and data jurisdiction are separate. I can switch the interface language while the active data country remains Denmark. The tool always keeps the source jurisdiction explicit, so a language change never becomes a false claim about the underlying data.
 
 **2:28–2:48**
 
-The pattern is designed to scale to country-specific connectors, but this challenge build is deliberately honest about its current scope: Denmark is live, other countries are planned. WebMCP turns a fragmented address-data workflow into structured tools for speed, visible sources and limitations for trust, and a human interface that stays in control.
+This challenge build is deliberately focused on a Danish address workflow. WebMCP turns fragmented public information into structured actions for speed, visible sources and limitations for trust, and a human interface that stays in control.
 
 ## Suggested AI-voice settings
 
