@@ -43,8 +43,9 @@ export async function GET(request: NextRequest) {
         note: soil.note,
       },
       climateAndGroundwater: {
-        checked: climate.kontrolleret,
-        found: climate.fundet,
+        coordinateReady: climate.kontrolleret,
+        datasetQueried: false,
+        findingReported: false,
         screeningLevel: climate.risikoNiveau,
         shallowGroundwaterStatus: climate.terraennaertGrundvandStatus,
         depressionsStatus: climate.lavningerStatus,
@@ -60,7 +61,7 @@ export async function GET(request: NextRequest) {
       },
       limitations: [
         "The soil check is an orienting screening against public V1/V2 layers at the address point and must be confirmed in official regional/DKJord information before purchase, excavation or authority decisions.",
-        "Climate and groundwater output is currently screening readiness unless concrete KAMP/HIP datasets are connected; it must not be presented as a final risk assessment.",
+        "Concrete KAMP/HIP datasets are not queried in this scoped public export. Climate and groundwater output reports coordinate readiness and follow-up sources, not a final risk assessment.",
       ],
     });
   } catch {
