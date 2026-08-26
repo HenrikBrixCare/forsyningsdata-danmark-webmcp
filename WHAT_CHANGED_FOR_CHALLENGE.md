@@ -6,7 +6,7 @@ The WebMCP work was intentionally isolated on the private product branch `webmcp
 
 `16b1219a907950d929e9707c8c6cd2fda8e28557`
 
-At the time this public challenge repository was prepared, the challenge branch was **51 commits ahead** of that base and **0 commits behind**.
+The challenge branch has a substantial timestamped sequence of commits created after the challenge opened. The exact commit count is intentionally not frozen in this document because challenge work continues during the submission period; the Git history and base commit above are the authoritative audit trail.
 
 ## Challenge-period additions
 
@@ -34,6 +34,6 @@ The challenge rules require a public open-source repository, while the pre-exist
 
 ## Evidence
 
-The challenge branch has a timestamped commit history beginning after the challenge opened. The private-product branch comparison records 51 challenge-period commits from the pre-challenge base above. The public repository then exports and documents the reviewable WebMCP contribution under MIT.
+The challenge branch has a timestamped commit history beginning after the challenge opened. The pre-challenge base SHA above gives judges a stable comparison point, while the challenge branch and this public repository expose the WebMCP-specific implementation and documentation created during the submission period.
 
 This separation is deliberate: judges can evaluate the WebMCP work without having to treat pre-existing commercial functionality as new challenge work.
