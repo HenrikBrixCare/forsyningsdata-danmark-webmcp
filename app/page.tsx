@@ -20,6 +20,11 @@ export default function HomePage() {
         <article className="data-card"><div className="card-kicker">Human in the loop</div><h2>Same workflow, two views</h2><p className="muted">Structured tool output and the human-readable profile stay connected instead of replacing each other.</p></article>
         <article className="data-card"><div className="card-kicker">Trust</div><h2>Sources + limitations</h2><p className="muted">Decision-support output preserves original-source attribution and does not turn screening into unsupported certainty.</p></article>
       </section>
+
+      <p className="muted" style={{ marginTop: 32 }}>
+        Address and parcel data attribution: (CC BY 4.0) Klimadatastyrelsen via Dataforsyningen.
+        {" "}<a className="source-link" href="https://dataforsyningen.dk/terms" target="_blank" rel="noreferrer">Terms</a>
+      </p>
     </main>
   );
 }
