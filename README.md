@@ -88,11 +88,18 @@ The live challenge branch was manually verified in Chrome from address search th
 
 ## Documentation
 
-- `ARCHITECTURE.md` — WebMCP architecture and human/agent flow
-- `TESTING.md` — reproducible Chrome/WebMCP regression steps
-- `CHALLENGE_DEMO.md` — 2–3 minute demo script
-- `DEVPOST_SUBMISSION.md` — prepared submission copy
-- `FINAL_CHECKLIST.md` — completed and remaining submission steps
+- [`ARCHITECTURE.md`](ARCHITECTURE.md) — WebMCP architecture and human/agent flow
+- [`JUDGING.md`](JUDGING.md) — how the build maps to the four judging criteria
+- [`TESTING.md`](TESTING.md) — reproducible Chrome/WebMCP regression steps
+- [`WEBMCP_SECURITY.md`](WEBMCP_SECURITY.md) — trust boundaries, hints and constrained visible actions
+- [`DATA_SOURCES.md`](DATA_SOURCES.md) — public data sources and attribution
+- [`WHAT_CHANGED_FOR_CHALLENGE.md`](WHAT_CHANGED_FOR_CHALLENGE.md) — pre-existing vs challenge-period work
+- [`CHALLENGE_DEMO.md`](CHALLENGE_DEMO.md) — core demo flow
+- [`VIDEO_SHOTLIST.md`](VIDEO_SHOTLIST.md) — timed <3-minute recording plan
+- [`YOUTUBE_UPLOAD.md`](YOUTUBE_UPLOAD.md) — prepared upload title/description/checks
+- [`DEPLOYMENT.md`](DEPLOYMENT.md) — clean public-judge deployment instructions
+- [`DEVPOST_SUBMISSION.md`](DEVPOST_SUBMISSION.md) — prepared submission copy
+- [`FINAL_CHECKLIST.md`](FINAL_CHECKLIST.md) — completed and remaining submission steps
 
 ## Stack
 
