@@ -20,7 +20,7 @@ Use this as the short field-by-field reference when completing the final submiss
 
 ## Existing-project explanation
 
-Forsyningsdata Danmark existed before the challenge as an unfinished web application for exploring Danish public property and geospatial data. During the submission period it was meaningfully extended with a new WebMCP integration exposing structured address, property, utility, environment, source, interface and visible-profile actions to AI agents. The challenge work is isolated in a timestamped challenge branch and documented in the public repository; the private challenge branch was 51 commits ahead of its pre-challenge base when the public export was prepared.
+Forsyningsdata Danmark existed before the challenge as an unfinished web application for exploring Danish public property and geospatial data. During the submission period it was meaningfully extended with a new WebMCP integration exposing structured address, property, utility, environment, source, interface and visible-profile actions to AI agents. The challenge work is isolated in a timestamped challenge branch and documented through a substantial sequence of challenge-period commits and the public repository.
 
 ## Public repository
 
@@ -30,7 +30,7 @@ https://github.com/HenrikBrixCare/forsyningsdata-danmark-webmcp
 
 **Use the final clean judge-accessible deployment URL after incognito testing.**
 
-Current preview candidate:
+Current rebuilt preview candidate:
 https://forsyningsdata-danmark-git-webmcp-challenge-2026-tilbudstjek.vercel.app
 
 ## Demo video
@@ -79,3 +79,5 @@ The agent can call `set_interface_language(language: "it")` while `get_interface
 - Existing-project disclosure included
 - Preview submission once
 - Press **Submit**; do not leave Draft
+- Deadline: **September 3, 2026 at 1:00pm PDT / 22:00 CEST in Denmark**
+- After the submission period closes, **do not edit the Devpost entry, submitted repo, or submitted live site during judging**
