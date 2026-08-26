@@ -71,7 +71,7 @@ The agent is not intended to replace the visible application. Structured results
 
 For example, after retrieving sewer information, the agent can call `focus_address_section` with `section: "sewer"`. The page then moves to the sewer section so the person can inspect the same source context visually.
 
-The agent can also change the interface language while the active data country remains Denmark. This demonstrates that **language and data jurisdiction are separate concepts**: an international contractor can work with Danish source data in another interface language without the application pretending that another country's connector is already live.
+The interface language can change while the active data country remains Denmark. This demonstrates a narrow WebMCP trust principle: changing presentation language does not change or misrepresent the jurisdiction of the underlying source data.
 
 ## Trust and safety principles
 
@@ -79,7 +79,7 @@ The agent can also change the interface language while the active data country r
 - Source attribution and limitation text travel with structured results.
 - Screening is decision support, not excavation-safe pipe geometry.
 - Missing/negative screening results are not converted into unsupported “no risk” conclusions.
-- Planned country connectors are never presented as active data coverage.
+- The demo makes the active data jurisdiction explicit.
 - Human follow-up is explicitly surfaced when exact drawings, permits, pipe locations or authority decisions are required.
 
 ## Diagnostics
