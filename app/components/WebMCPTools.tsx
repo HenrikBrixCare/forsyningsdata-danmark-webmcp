@@ -69,7 +69,7 @@ export default function WebMCPTools() {
         name: "open_address_profile", title: "Open the address profile",
         description: "Open the human-readable profile for the verified address so the person can inspect the same context the agent is using.",
         inputSchema: { type: "object", properties: { addressId: { type: "string", minLength: 1 } }, required: ["addressId"] },
-        annotations: { readOnlyHint: true, untrustedContentHint: false },
+        annotations: { readOnlyHint: false, untrustedContentHint: false },
         execute: (input) => {
           const id = addressId(input); if (!id) return missing();
           const profilePath = `/adresse/${encodeURIComponent(id)}`; window.location.assign(profilePath);
