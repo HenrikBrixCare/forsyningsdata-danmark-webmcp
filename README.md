@@ -2,6 +2,31 @@
 
 Forsyningsdata Danmark is an address-first Danish public-data application that demonstrates how a website can expose structured actions to AI agents through WebMCP while keeping a human-readable interface, source attribution and limitations in the loop.
 
+## Live challenge preview
+
+The challenge branch used for the recorded/manual demo is available at:
+
+`https://forsyningsdata-danmark-git-webmcp-challenge-2026-tilbudstjek.vercel.app`
+
+Recommended regression/demo address:
+
+`Vonsyldsgade 11, 9000 Aalborg`
+
+Canonical access-address ID:
+
+`0a3f509c-e673-32b8-e044-0003ba298018`
+
+## Quick start
+
+```bash
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000/webmcp-test` in a WebMCP-enabled browser.
+
+For Chrome challenge testing, enable the WebMCP testing flag and use the Model Context Tool Inspector to inspect and execute the registered tools.
+
 ## Why WebMCP
 
 Public property and infrastructure information is fragmented across national registries, planning datasets and municipality-specific sources. A normal browser agent has to infer meaning from page structure. WebMCP gives the agent explicit, typed actions for the workflow instead.
@@ -13,8 +38,8 @@ The challenge build lets an agent move from an ordinary address to verified, str
 Using `Vonsyldsgade 11, 9000 Aalborg` as the regression/demo address, the agent can:
 
 1. find the official Danish address and stable ID,
-2. retrieve parcel/BFE/lot-area and available BBR context,
-3. retrieve sewer, drainage, water and orienting gas-network context,
+2. retrieve parcel/BFE/lot-area and available property context,
+3. retrieve sewer, water and orienting utility context,
 4. run an orienting environmental screening,
 5. list relevant official map layers,
 6. return original local/authority sources and recommended human checks,
@@ -55,9 +80,9 @@ The agent can also change the interface language while the active data country r
 
 ## Diagnostics
 
-The challenge build includes `/webmcp-test`, which reports whether `document.modelContext` is available and lists the WebMCP tools actually discovered by the browser.
+The scoped public demo includes `/webmcp-test`, which reports whether `document.modelContext` is available and shows the 10 expected challenge tools. The browser's Model Context Tool Inspector is the authoritative view of tools actually discovered in a session.
 
-Chrome testing was performed with the WebMCP testing flag enabled and the Model Context Tool Inspector. The regression flow was manually verified from address search through profile focus and language switching.
+The live challenge branch was manually verified in Chrome from address search through property/utility/environment calls, map-layer listing, source handoff, profile navigation/focus and language switching.
 
 ## Stack
 
@@ -74,7 +99,9 @@ Forsyningsdata Danmark existed before the challenge as an unfinished web applica
 
 ## Public challenge scope
 
-This repository contains the scoped, reviewable WebMCP challenge implementation and supporting demo code. The separate commercial/private product repository is not part of this public challenge submission.
+This repository is intentionally **not** a dump of the pre-existing commercial/private application. It contains the scoped, runnable, reviewable WebMCP challenge contribution and a minimal supporting data/UI layer.
+
+The live challenge preview integrates the same WebMCP interaction model with the pre-existing private product data layer. Proprietary municipality adapters, unrelated commercial logic, credentials, account/payment flows and non-challenge strategy are excluded from this public repository.
 
 ## License
 
