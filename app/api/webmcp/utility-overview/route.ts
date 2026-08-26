@@ -41,9 +41,10 @@ export async function GET(request: NextRequest) {
           sourceUrl: sewer.kildeUrl,
         },
         drainage: {
-          status: "requires_configured_source",
+          status: "source_handoff",
           source: "BBR via Datafordeleren",
-          note: "The live challenge integration can include configured BBR drainage data. The scoped public repository does not ship credentials and therefore reports the source handoff instead of fabricating a value.",
+          includedInPublicExport: false,
+          note: "Property-level BBR drainage details are intentionally outside the scoped public challenge export. The workflow surfaces the original-source handoff instead of fabricating a value or reporting a configuration error.",
         },
         water: {
           status: "human_follow_up",
@@ -51,16 +52,16 @@ export async function GET(request: NextRequest) {
           note: "Exact local supply details are handed back to the named original municipal/utility source in the scoped public export.",
         },
         gas: {
-          status: "orienting_only",
+          status: "source_handoff",
           source: "Evida public map",
           sourceUrl: "https://gis.evida.dk/",
-          note: "Nearby network context is not proof of a property service connection.",
+          note: "No property-specific gas conclusion is made here. Nearby network context and service connection must be checked in the original source.",
         },
       },
       limitations: [
         "Utility information is decision support and must be checked against original utility or authority sources before excavation or design.",
         "The sewer result is selected against the verified address coordinate; exact on-property pipe geometry is not provided by this tool.",
-        "Credential-based or proprietary local adapters are not silently simulated in the public challenge export.",
+        "Credential-based or proprietary local adapters are intentionally outside the scoped public challenge export and are not silently simulated.",
       ],
       profilePath: `/adresse/${encodeURIComponent(address.id)}`,
     });
