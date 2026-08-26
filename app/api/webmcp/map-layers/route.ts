@@ -61,35 +61,39 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const address = await getAddress(id);
-  if (!address) {
-    return NextResponse.json({ ok: false, country: "DK", addressId: id, error: "address_not_found" }, { status: 404 });
-  }
+  try {
+    const address = await getAddress(id);
+    if (!address) {
+      return NextResponse.json({ ok: false, country: "DK", addressId: id, error: "address_not_found" }, { status: 404 });
+    }
 
-  return NextResponse.json({
-    ok: true,
-    country: "DK",
-    addressId: address.id,
-    address: address.label,
-    point: address.lon !== null && address.lat !== null ? { lon: address.lon, lat: address.lat } : null,
-    source: {
-      id: "dataforsyningen-forvaltning-sagsbehandling",
-      name: "Dataforsyningen / Forvaltning og Sagsbehandling",
-      description: "Official WMS/WMTS map layers for casework, map control and visual address context.",
-      datasetUrl: "https://dataforsyningen.dk/data/2680",
-      metadataUrl: "https://datavejviser.dk/katalog/klimadatastyrelsen/420bcfba-c98f-4c09-8b7b-88c18534f952",
-      wmsCapabilitiesUrl: `${WMS_URL}?service=WMS&request=GetCapabilities`,
-      wmtsCapabilitiesUrl: `${WMTS_URL}?service=WMTS&request=GetCapabilities`,
-    },
-    layers,
-    limitations: [
-      "WMS/WMTS are primarily map images/tiles and are not automatically structured conclusions.",
-      "Hard conclusions require a validated feature source, documented GetFeatureInfo result or another structured original source.",
-      "Exact excavation-safe utility geometry is outside this scoped public challenge export.",
-    ],
-    nextTechnicalSteps: [
-      "Render selected WMTS/WMS layers on the human-readable address profile.",
-      "Use GetFeatureInfo only for layers where the source contract and returned fields have been validated.",
-    ],
-  });
+    return NextResponse.json({
+      ok: true,
+      country: "DK",
+      addressId: address.id,
+      address: address.label,
+      point: address.lon !== null && address.lat !== null ? { lon: address.lon, lat: address.lat } : null,
+      source: {
+        id: "dataforsyningen-forvaltning-sagsbehandling",
+        name: "Dataforsyningen / Forvaltning og Sagsbehandling",
+        description: "Official WMS/WMTS map layers for casework, map control and visual address context.",
+        datasetUrl: "https://dataforsyningen.dk/data/2680",
+        metadataUrl: "https://datavejviser.dk/katalog/klimadatastyrelsen/420bcfba-c98f-4c09-8b7b-88c18534f952",
+        wmsCapabilitiesUrl: `${WMS_URL}?service=WMS&request=GetCapabilities`,
+        wmtsCapabilitiesUrl: `${WMTS_URL}?service=WMTS&request=GetCapabilities`,
+      },
+      layers,
+      limitations: [
+        "WMS/WMTS are primarily map images/tiles and are not automatically structured conclusions.",
+        "Hard conclusions require a validated feature source, documented GetFeatureInfo result or another structured original source.",
+        "Exact excavation-safe utility geometry is outside this scoped public challenge export.",
+      ],
+      nextTechnicalSteps: [
+        "Render selected WMTS/WMS layers on the human-readable address profile.",
+        "Use GetFeatureInfo only for layers where the source contract and returned fields have been validated.",
+      ],
+    });
+  } catch {
+    return NextResponse.json({ ok: false, country: "DK", addressId: id, error: "map_layers_failed" }, { status: 502 });
+  }
 }
