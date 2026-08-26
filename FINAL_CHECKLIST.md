@@ -20,12 +20,15 @@
 - [x] Testing documentation
 - [x] 2–3 minute demo script
 - [x] Devpost submission copy drafted
+- [x] Fresh Vercel preview build triggered and completed successfully on 2026-08-26
+- [x] Submission text aligned to the official Sep 3, 2026 1:00pm PDT deadline
+- [x] Judging-period freeze warning added to submission notes
 
 ## Still needs a human/browser step
 
 - [ ] Verify final live URL from a clean/incognito browser with no Vercel login cookie
 - [ ] Record demo video with audio
-- [ ] Upload/publish demo video and copy URL
+- [ ] Upload/publish demo video to YouTube and copy URL
 - [ ] Add final live URL + video URL to Devpost
 - [ ] Review Devpost preview once
 - [ ] Submit — do not leave entry in Draft
@@ -43,3 +46,9 @@
 → `get_interface_context`
 
 The judged story should emphasize that WebMCP is not just returning JSON: the agent and the human share the same visible address workflow.
+
+## Hard deadline and freeze
+
+Official submission deadline: **September 3, 2026 at 1:00pm PDT / 22:00 CEST in Denmark**.
+
+After the submission period closes, do **not** edit the submitted Devpost entry, submitted repository, or submitted live site during judging. Continue later work only in a separate fork/copy that is not the submitted version.
