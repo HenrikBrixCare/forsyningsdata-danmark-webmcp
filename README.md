@@ -4,9 +4,11 @@ Forsyningsdata Danmark is an address-first Danish public-data application that d
 
 ## Live challenge preview
 
-The challenge branch used for the recorded/manual demo is available at:
+The challenge branch used for the recorded/manual demo is currently available at:
 
 `https://forsyningsdata-danmark-git-webmcp-challenge-2026-tilbudstjek.vercel.app`
+
+Before final Devpost submission, this URL will be verified from a clean browser with no Vercel/login cookie.
 
 Recommended regression/demo address:
 
@@ -83,6 +85,14 @@ The agent can also change the interface language while the active data country r
 The scoped public demo includes `/webmcp-test`, which reports whether `document.modelContext` is available and shows the 10 expected challenge tools. The browser's Model Context Tool Inspector is the authoritative view of tools actually discovered in a session.
 
 The live challenge branch was manually verified in Chrome from address search through property/utility/environment calls, map-layer listing, source handoff, profile navigation/focus and language switching.
+
+## Documentation
+
+- `ARCHITECTURE.md` — WebMCP architecture and human/agent flow
+- `TESTING.md` — reproducible Chrome/WebMCP regression steps
+- `CHALLENGE_DEMO.md` — 2–3 minute demo script
+- `DEVPOST_SUBMISSION.md` — prepared submission copy
+- `FINAL_CHECKLIST.md` — completed and remaining submission steps
 
 ## Stack
 
